@@ -22,11 +22,16 @@ import Newpackage.pageobject.ProductCatalog;
 public class StandAloneTest {
 
 	public static void main(String[] args) throws InterruptedException {
-		// TODO Auto-generated method stub
 		
+//		
+//		
+//               This class is created for testing without the use of Testng
+//               
+//               and for getting the xpaths
+//		
+//          
 
 				String productName = "ZARA COAT 3";
-			
 				WebDriver driver =  new ChromeDriver();
 				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 				driver.manage().window().maximize();

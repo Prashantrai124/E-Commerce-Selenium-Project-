@@ -27,7 +27,6 @@ public class SubmitOrderTest {
 	public static WebDriver driver=driver = new ChromeDriver();
 	String productName = "ZARA COAT 3";
 
-	// TODO Auto-generated method stub
 	LandingPage landingPage = new LandingPage(driver);
 	ProductCatalog productCatalog = new ProductCatalog(driver);
 	CartPage cartpage = new CartPage(driver);

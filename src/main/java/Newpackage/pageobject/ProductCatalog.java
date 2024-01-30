@@ -14,7 +14,7 @@ import org.testng.Assert;
 import NewPackage.AbstractComponent;
 
 public class ProductCatalog extends AbstractComponent {
-
+     String productName= "ZARA COAT 3";
      WebDriver driver;
 	public ProductCatalog(WebDriver driver)
 	{

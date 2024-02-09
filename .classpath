@@ -36,42 +36,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/unicode/.m2/repository/org/seleniumhq/selenium/selenium-api/4.14.1/selenium-api-4.14.1.jar" sourcepath="/home/unicode/.m2/repository/org/seleniumhq/selenium/selenium-api/4.14.1/selenium-api-4.14.1-sources.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="org.seleniumhq.selenium"/>
-			<attribute name="maven.artifactId" value="selenium-api"/>
-			<attribute name="maven.version" value="4.14.1"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/home/unicode/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.14.1/selenium-chrome-driver-4.14.1.jar" sourcepath="/home/unicode/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.14.1/selenium-chrome-driver-4.14.1-sources.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="org.seleniumhq.selenium"/>
-			<attribute name="maven.artifactId" value="selenium-chrome-driver"/>
-			<attribute name="maven.version" value="4.14.1"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/home/unicode/.m2/repository/org/seleniumhq/selenium/selenium-support/4.14.1/selenium-support-4.14.1.jar" sourcepath="/home/unicode/.m2/repository/org/seleniumhq/selenium/selenium-support/4.14.1/selenium-support-4.14.1-sources.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="org.seleniumhq.selenium"/>
-			<attribute name="maven.artifactId" value="selenium-support"/>
-			<attribute name="maven.version" value="4.14.1"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/home/unicode/.m2/repository/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar" sourcepath="/home/unicode/.m2/repository/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2-sources.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="dev.failsafe"/>
-			<attribute name="maven.artifactId" value="failsafe"/>
-			<attribute name="maven.version" value="3.3.2"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="lib" path="/home/unicode/.p2/pool/plugins/org.testng_7.4.0.r202105021533.jar" sourcepath="/home/unicode/.p2/pool/plugins/org.testng.source_7.4.0.r202105021533.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

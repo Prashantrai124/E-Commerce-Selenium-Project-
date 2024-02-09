@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import NewPackage.AbstractComponent;
+import reusableComponent.AbstractComponent;
 
 public class CartPage extends AbstractComponent{
 	WebDriver driver;
@@ -31,9 +31,10 @@ public class CartPage extends AbstractComponent{
 
 	}
 
-	public void  goToCheckout() {
+	public CheckoutPage  goToCheckout() {
 		checkoutEle.click();
-		//return new CheckoutPage(driver);
+		
+	return new CheckoutPage(driver);
 		
 
 	}

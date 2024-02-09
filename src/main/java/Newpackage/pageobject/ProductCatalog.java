@@ -11,7 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
-import NewPackage.AbstractComponent;
+import reusableComponent.AbstractComponent;
 
 public class ProductCatalog extends AbstractComponent {
      String productName= "ZARA COAT 3";

@@ -5,11 +5,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class ConfirmationPage {
+import reusableComponent.AbstractComponent;
+
+public class ConfirmationPage extends AbstractComponent{
 	WebDriver driver;
 
 	public ConfirmationPage(WebDriver driver) {
-		super();
+	    super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		

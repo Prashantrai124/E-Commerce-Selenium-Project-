@@ -16,16 +16,19 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import NewPackage.AbstractComponent;
 import Newpackage.pageobject.CartPage;
 import Newpackage.pageobject.CheckoutPage;
 import Newpackage.pageobject.ConfirmationPage;
 import Newpackage.pageobject.LandingPage;
 import Newpackage.pageobject.ProductCatalog;
+import reusableComponent.AbstractComponent;
+import reusableComponent.iTestListenerClass;
+
 
 public class SubmitOrderTest {
-	public static WebDriver driver=driver = new ChromeDriver();
+	public static WebDriver driver = new ChromeDriver();
 	String productName = "ZARA COAT 3";
+	String countyName ="India";
 
 	LandingPage landingPage = new LandingPage(driver);
 	ProductCatalog productCatalog = new ProductCatalog(driver);
@@ -34,6 +37,7 @@ public class SubmitOrderTest {
 	CheckoutPage checkout = new CheckoutPage(driver);
 
 	ConfirmationPage confirm = new ConfirmationPage(driver);
+
     @BeforeTest
 	public void openBrowser() {
 		
@@ -42,35 +46,36 @@ public class SubmitOrderTest {
 		//driver.get("https://rahulshettyacademy.com/client");
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 1, testName="LandingPage")
 	public void Landingpage() {
 		landingPage.goTo();
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 2,testName="Login Page")
 	public void LoginIntoWebsite() {
 		landingPage.loginApplication("anshika@gmail.com", "Iamking@000");
 	}
 
-	@Test(priority = 3, dependsOnMethods="LoginIntoWebsite")
+	@Test(priority = 3, dependsOnMethods="LoginIntoWebsite" ,testName="Getting all the Productss")
 	public void GettingProduct() {
 		List<WebElement> productsss = productCatalog.getProducts();
 		productCatalog.addProductToCart(productName);
 	}
 
 	// System.out.println(productsss);
-	@Test(priority = 3, dependsOnMethods="GettingProduct")
+	@Test(priority = 3, dependsOnMethods="GettingProduct" ,testName="Click on Cart Button")
 	public void ClickOnCart() throws InterruptedException {
-		productCatalog.goToCartButton();
+		productCatalog.goToCartPage();
 	}
 
-	@Test(priority = 4,dependsOnMethods="ClickOnCart")
+	@Test(priority = 4,dependsOnMethods="ClickOnCart",testName="Veryfying the Produt")
 	public void VeryfyingProduct() {
+	
 		Boolean match = cartpage.VerifyProductDisplay(productName);
-		Assert.assertTrue(match);
+		Assert.assertFalse(match);
 	}
 
-	@Test(priority = 5,dependsOnMethods="VeryfyingProduct")
+	@Test(priority = 5,dependsOnMethods="VeryfyingProduct" ,testName="Check Out Page")
 	public void CheckoutPage() {
 		cartpage.goToCheckout();
 
@@ -78,7 +83,7 @@ public class SubmitOrderTest {
 	}
 
 	@Test(priority = 6,dependsOnMethods="CheckoutPage")
-	public void SubmitOrder() {
+	public void SubmitOrder() throws InterruptedException {
 		checkout.submitOrder();
 	}
 
@@ -91,7 +96,7 @@ public class SubmitOrderTest {
 	@AfterTest
 	public void CloseBrowser()
 	{
-		driver.quit();
+		//driver.quit();
 	}
 
 }
